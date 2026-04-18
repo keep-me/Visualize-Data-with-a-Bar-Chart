@@ -10,6 +10,103 @@
   <body>
     <div id="container">
       <h1 id="title">United States GDP Over Time</h1>
+      
+      <!-- Configuration Panel -->
+      <div id="config-panel">
+        <h2>Chart Configuration</h2>
+        
+        <div class="config-section">
+          <h3>Dimensions</h3>
+          <div class="config-row">
+            <label for="chart-width">Width:</label>
+            <input type="number" id="chart-width" value="900" min="400" max="2000" step="10" />
+            <span class="unit">px</span>
+          </div>
+          <div class="config-row">
+            <label for="chart-height">Height:</label>
+            <input type="number" id="chart-height" value="500" min="300" max="1200" step="10" />
+            <span class="unit">px</span>
+          </div>
+        </div>
+        
+        <div class="config-section">
+          <h3>Margin</h3>
+          <div class="config-row">
+            <label for="margin-top">Top:</label>
+            <input type="number" id="margin-top" value="50" min="0" max="200" step="5" />
+            <span class="unit">px</span>
+          </div>
+          <div class="config-row">
+            <label for="margin-right">Right:</label>
+            <input type="number" id="margin-right" value="50" min="0" max="200" step="5" />
+            <span class="unit">px</span>
+          </div>
+          <div class="config-row">
+            <label for="margin-bottom">Bottom:</label>
+            <input type="number" id="margin-bottom" value="100" min="0" max="200" step="5" />
+            <span class="unit">px</span>
+          </div>
+          <div class="config-row">
+            <label for="margin-left">Left:</label>
+            <input type="number" id="margin-left" value="50" min="0" max="200" step="5" />
+            <span class="unit">px</span>
+          </div>
+        </div>
+        
+        <div class="config-section">
+          <h3>Colors</h3>
+          <div class="config-row">
+            <label for="bar-color">Bar Color:</label>
+            <input type="color" id="bar-color" value="#337ab7" />
+            <span class="color-preview" id="bar-color-preview" style="background-color: #337ab7;"></span>
+          </div>
+          <div class="config-row">
+            <label for="bar-hover-color">Hover Color:</label>
+            <input type="color" id="bar-hover-color" value="#23527c" />
+            <span class="color-preview" id="bar-hover-color-preview" style="background-color: #23527c;"></span>
+          </div>
+          <div class="config-row">
+            <label for="tooltip-bg-color">Tooltip Background:</label>
+            <input type="color" id="tooltip-bg-color" value="#000000" />
+            <span class="color-preview" id="tooltip-bg-color-preview" style="background-color: #000000;"></span>
+          </div>
+          <div class="config-row">
+            <label for="tooltip-text-color">Tooltip Text:</label>
+            <input type="color" id="tooltip-text-color" value="#ffffff" />
+            <span class="color-preview" id="tooltip-text-color-preview" style="background-color: #ffffff;"></span>
+          </div>
+        </div>
+        
+        <div class="config-section">
+          <h3>Axis Settings</h3>
+          <div class="config-row">
+            <label for="x-tick-interval">X-Axis Tick Interval:</label>
+            <select id="x-tick-interval">
+              <option value="1" selected>Every 1 year</option>
+              <option value="2">Every 2 years</option>
+              <option value="5">Every 5 years</option>
+              <option value="10">Every 10 years</option>
+            </select>
+            <span class="unit">years</span>
+          </div>
+        </div>
+        
+        <div class="config-section">
+          <h3>Presets</h3>
+          <div class="config-row">
+            <button id="preset-blue" class="preset-btn">Blue Theme</button>
+            <button id="preset-green" class="preset-btn">Green Theme</button>
+            <button id="preset-red" class="preset-btn">Red Theme</button>
+            <button id="preset-dark" class="preset-btn">Dark Theme</button>
+          </div>
+        </div>
+        
+        <div class="config-actions">
+          <button id="apply-config">Apply Changes</button>
+          <button id="reset-config">Reset to Default</button>
+        </div>
+      </div>
+      
       <svg id="chart"></svg>
       <div id="tooltip"></div>
     </div>
